@@ -4,7 +4,7 @@
   "description": "",
   "source": "src/index.html",
   "scripts": {
-    "start": "parcel",
+    "start": "npm run build && parcel",
     "build": "parcel build",
     "rename": "node rename.js",
     "deploy": "parcel build src/index.html --public-url 'https://bmordan.github.io/phaser-game' && rm -fr docs && mkdir docs && cp -R ./dist/* ./docs/ && git add -A && git commit -m 'deploy to github pages' && git push github master"

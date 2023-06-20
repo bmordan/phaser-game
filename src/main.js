@@ -1,10 +1,9 @@
 import Phaser from 'phaser'
 
-const { pathname = "/" } = window.location
-
-console.log({pathname})
 
 function preload () {
+    const { pathname = "/" } = window.location
+    console.log({pathname})
     this.load.atlas('idle', `${pathname}idle.png`, `${pathname}idle.json`)
     this.load.atlas('move', `${pathname}move.png`, `${pathname}move.json`)
     this.load.tilemapTiledJSON('tilemap', `${pathname}moon-level.json`)
