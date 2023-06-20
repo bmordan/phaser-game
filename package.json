@@ -6,7 +6,8 @@
   "scripts": {
     "start": "parcel",
     "build": "parcel build",
-    "rename": "node rename.js"
+    "rename": "node rename.js",
+    "deploy": "npm run build && rm -fr docs && mkdir docs && cp -R ./dist/* ./docs/ && git add -A && git commit -m 'deploy to github pages' && git push github master"
   },
   "author": "",
   "license": "ISC",
