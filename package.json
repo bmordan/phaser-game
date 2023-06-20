@@ -7,7 +7,7 @@
     "start": "parcel",
     "build": "parcel build",
     "rename": "node rename.js",
-    "deploy": "parcel build ./*.html --public-url 'https://bmordan.github.io/phaser-game' && rm -fr docs && mkdir docs && cp -R ./dist/* ./docs/ && git add -A && git commit -m 'deploy to github pages' && git push github master"
+    "deploy": "parcel build src/index.html --public-url 'https://bmordan.github.io/phaser-game' && rm -fr docs && mkdir docs && cp -R ./dist/* ./docs/ && git add -A && git commit -m 'deploy to github pages' && git push github master"
   },
   "author": "",
   "license": "ISC",
