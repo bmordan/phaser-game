@@ -1,15 +1,19 @@
 import Phaser from 'phaser'
 
+const { pathname = "/" } = window.location
+
+console.log({pathname})
+
 function preload () {
-    this.load.atlas('idle', '/idle.png', '/idle.json')
-    this.load.atlas('move', '/move.png', '/move.json')
-    this.load.tilemapTiledJSON('tilemap', '/moon-level.json')
-    this.load.image('bg0', '/tileset_artwork/Background_0.png')
-    this.load.image('bg1', '/tileset_artwork/Background_1.png')
-    this.load.image('bg_brush', '/tileset_artwork/brush.png')
-    this.load.image('bg_grass_1', '/tileset_artwork/Grass_background_1.png')
-    this.load.image('bg_grass_2', '/tileset_artwork/Grass_background_2.png')
-    this.load.image('bg_tiles', '/tileset_artwork/Tiles.png')
+    this.load.atlas('idle', `${pathname}idle.png`, `${pathname}idle.json`)
+    this.load.atlas('move', `${pathname}move.png`, `${pathname}move.json`)
+    this.load.tilemapTiledJSON('tilemap', `${pathname}moon-level.json`)
+    this.load.image('bg0', `${pathname}tileset_artwork/Background_0.png`)
+    this.load.image('bg1', `${pathname}tileset_artwork/Background_1.png`)
+    this.load.image('bg_brush', `${pathname}tileset_artwork/brush.png`)
+    this.load.image('bg_grass_1', `${pathname}tileset_artwork/Grass_background_1.png`)
+    this.load.image('bg_grass_2', `${pathname}tileset_artwork/Grass_background_2.png`)
+    this.load.image('bg_tiles', `${pathname}tileset_artwork/Tiles.png`)
 }
 
 function create () {
