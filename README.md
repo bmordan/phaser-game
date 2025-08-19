@@ -1,4 +1,4 @@
-# Multiverse Code a Game Workshop - Part I
+# Code a Game Workshop - Part I
 
 [Play the demo](https://bmordan.github.io/phaser-game/)
 
